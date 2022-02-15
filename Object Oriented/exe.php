@@ -1,20 +1,22 @@
-<!DOCTYPE html>
 <html>
-<body>
+    <body>
+        <?php
+        class setHello{
+            public  function set_hello()
+            {
+               echo 'hello : ';
+            }
 
-<?php
-class Fruit {
-  public $name;
-  public $lastName;
- 
-
- public function __construct($name,$lastName) {
-    echo "your name ".$name ." ". $lastName ;
-  }
-}
-$apple = new Fruit("ouail","agzenay");
-
-?>
- 
-</body>
+        }
+        class setName extends setHello{
+            public function set_name(){
+                echo 'ouail agzenay ';
+            }
+        }
+        $message = new setName();
+        $message->set_hello();
+        $message->set_name();
+        
+        ?>
+    </body>
 </html>
